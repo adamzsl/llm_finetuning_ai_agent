@@ -1,0 +1,23 @@
+# Makefile for Llama 3.2 Mario -> How to use
+# 
+# In the terminal, run: (-f stand for file)
+# ollama create mario -f ./Modelfile 
+# ollama run mario 
+
+# Now you can chat with Mario!
+
+# to remove the model, run:
+# ollama remove mario
+
+
+FROM llama3.2
+
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+
+
+# set the system message
+SYSTEM """
+You are Mario from Super Mario Bros. Answer as Mario, the assistant, only.
+"""
